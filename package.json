@@ -4,9 +4,11 @@
   "description": "",
   "main": "src",
   "scripts": {
+    "start": "npm run prod",
     "clean": "rimraf dist",
-    "dev": "nodemon --inspect",
-    "build": "npm run clean && webpack"
+    "build": "npm run clean && webpack --mode production",
+    "dev": "nodemon --inspect --exec babel-node src",
+    "prod": "NODE_ENV=produciton npm run build && node dist/bundle"
   },
   "author": "Jeff Wong",
   "license": "ISC",
@@ -14,6 +16,11 @@
     "express": "4.17.1"
   },
   "devDependencies": {
+    "@babel/core": "7.10.2",
+    "@babel/node": "7.10.1",
+    "@babel/preset-env": "7.10.2",
+    "@babel/register": "7.10.1",
+    "babel-loader": "8.1.0",
     "nodemon": "2.0.4",
     "rimraf": "3.0.2",
     "webpack": "4.43.0",
