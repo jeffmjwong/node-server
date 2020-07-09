@@ -4,7 +4,7 @@ import cors from "cors";
 const app = express();
 const port = 3000;
 
-app.use(cors({ origin: "http://jeffs.xyz:11003" }));
+app.use(cors());
 
 app.get("/a", (req, res) => {
   console.log("Request coming in for endpoint a!")

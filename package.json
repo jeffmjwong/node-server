@@ -8,7 +8,7 @@
     "clean": "rimraf dist",
     "build": "npm run clean && webpack --mode production",
     "dev": "nodemon --inspect --exec babel-node src",
-    "prod": "NODE_ENV=produciton npm run build && node dist/bundle"
+    "prod": "NODE_ENV=production npm run build && node dist/bundle"
   },
   "author": "Jeff Wong",
   "license": "ISC",
