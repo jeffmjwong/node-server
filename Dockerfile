@@ -4,6 +4,7 @@ RUN mkdir /home/node-server
 
 WORKDIR /home/node-server
 
+
 COPY dist/bundle.js .
 
 EXPOSE 3000
