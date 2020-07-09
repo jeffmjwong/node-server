@@ -4,6 +4,7 @@
   "description": "",
   "main": "src",
   "scripts": {
+    "test": "jest",
     "start": "npm run prod",
     "clean": "rimraf dist",
     "build": "npm run clean && webpack --mode production",
@@ -22,6 +23,7 @@
     "@babel/preset-env": "7.10.2",
     "@babel/register": "7.10.1",
     "babel-loader": "8.1.0",
+    "jest": "26.1.0",
     "nodemon": "2.0.4",
     "rimraf": "3.0.2",
     "webpack": "4.43.0",
