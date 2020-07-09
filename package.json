@@ -4,6 +4,7 @@
   "description": "",
   "main": "src",
   "scripts": {
+    "test": "jest",
     "start": "npm run prod",
     "clean": "rimraf dist",
     "build": "npm run clean && webpack --mode production",
