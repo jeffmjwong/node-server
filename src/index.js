@@ -8,7 +8,7 @@ app.use(cors());
 
 app.get("/a", (req, res) => {
   console.log("Request coming in for endpoint a!")
-  res.json([{ id: 1, name: "Martin Lombok" }, { id: 9005, name: "Kevin Nam" }]);
+  res.json([{ id: 1, name: "Martin Lombok" }, { id: 2, name: "Kevin Nam" }]);
 });
 
 app.get("/b", (req, res) => {
