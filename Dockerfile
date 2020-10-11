@@ -1,11 +1,22 @@
-FROM node:12.16.0
+FROM node:12.19.0 as build
 
-RUN mkdir /home/node-server
+WORKDIR /app-build
 
-WORKDIR /home/node-server
+COPY . .
 
+RUN npm install
 
-COPY dist/bundle.js .
+RUN npm run build
+
+FROM node:12.19.0-alpine3.12
+
+RUN adduser -D jeff
+
+USER jeff
+
+WORKDIR /app
+
+COPY --from=build /app-build/dist/bundle.js .
 
 EXPOSE 3000
 
